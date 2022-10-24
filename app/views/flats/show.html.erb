@@ -1,0 +1,36 @@
+<%= link_to "Simple Airbnb", flats_path%>
+<h1><%= @flat.name %></h1>
+
+<div class="address-component">
+  <h3><%= @flat.name %></h3>
+  <p><%= @flat.address %></p>
+</div>
+
+<div class="map-component">
+  <h3>A bit more about this flat...</h3>
+</div>
+
+<div class="booking-component">
+  <h3>Book this place!</h3>
+  <p>
+    <label for="From">From:</label>
+    <input type="text" name="From" id="From">
+  </p>
+  <p>
+    <label for="To">To:</label>
+    <input type="text" name="To" id="To">
+  </p>
+  <P>
+  <input type="submit">
+  </P>
+</div>
+
+<div class="detail-component">
+  <h3>Detail</h3>
+  <p><%= @flat.address %></p>
+  <p><%= @flat.number_of_guests %></p>
+</div>
+
+<div class="share-component">
+  <h3>Share</h3>
+</div>

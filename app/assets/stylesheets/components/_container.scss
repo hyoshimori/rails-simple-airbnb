@@ -1,0 +1,65 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-right: 8%;
+  margin-top: 20px;
+  margin: auto;
+}
+
+.container .flat{
+  background-color: white;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.upper-side{
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+}
+
+.flat-links{
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.flat-links a{
+  color: #DC3545;
+  position: sticky;
+  bottom: 0;
+}
+
+.flat-links a:first-child{
+  color: #0D6EFD;
+}
+
+.flat-links a:nth-child(2){
+  color: #FFC008;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+    grid-template-columns: 1fr;
+    margin-left: 8%;
+  }
+  .container .flat{
+    width: 400px;
+  }
+}

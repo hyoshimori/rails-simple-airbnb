@@ -1,0 +1,27 @@
+<div class="nav-bar">
+  <h2>Simple Airbnb</h2>
+  <div class="nav-bar-right">
+    <input class="nav-bar-right--elements search" type="search" name="search" id="search" placeholder="Search">
+    <input class="nav-bar-right--elements submit-button" type="submit" name="search" id="search" value="Search">
+    <%= button_to "Add flat", {controller: "flats", action: "new"}, {method: :get }%>
+
+  </div>
+</div>
+
+<div class="container">
+<% @flats.each do |flat| %>
+  <div class="flat">
+      <div class="upper-side">
+        <h4 class="test"><%= flat.name %></h4>
+        <p><%= flat.address %></p>
+        <p>Gests:<%= flat.number_of_guests %>
+        Price: <%= flat.price_per_night %> (per night)</p>
+      </div>
+      <div class="flat-links">
+        <%= link_to "More info", flat_path(flat.id)  %>
+        <%= link_to "Edit your flat", edit_flat_path(flat.id) %>
+        <%= link_to 'Delete', flat_path(flat.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      </div>
+  </div>
+<% end %>
+</div>
